@@ -17,17 +17,21 @@ def process_data(content):
         # Split the line into a list using space as a separator
         line_details = line.split(" ")
 
-        # Combine the first and second elements to get the full name
+        # Combine the elements to get the full name
         full_name = line_details[0] + " " + line_details[1]
         names.append(full_name)
 
-        # Combine the third, fourth, and fifth elements to get the full birthday
+        # Combine the elements to get the full birthday
         birthday = line_details[2] + " " + line_details[3] + " " + line_details[4].strip("\n")
         birthdates.append(birthday)
 
     return names, birthdates
 
 def main():
+    '''
+    Reads through the data from the text file using 'utf-8' encoding and then iteraing through 
+    the data using lists, prints out the data in the format of full names and then Birthdates 
+    '''
     file_path = 'DOB.txt'  # Replace with your actual file path
     content = read_file(file_path)
 
@@ -46,4 +50,3 @@ def main():
 
 
 main()
-
